@@ -4,12 +4,20 @@ const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin"); 
 // 將js插入#app
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+<<<<<<< HEAD
 const HTMLWebpackPluginConfig = function(tem, filename, chunk){
+=======
+const HTMLWebpackPluginConfig = function(tem, filename, chunks){
+>>>>>>> 5e61dca3afba328687b0de714339607d2009e420
 	return 	new HtmlWebpackPlugin({
 				template: `${__dirname}/src/`+ tem +'.html',
 				filename: filename+'.html',
 				inject: 'body',
+<<<<<<< HEAD
 				chunks: ['commons','vendors',chunk]
+=======
+				chunks: chunks
+>>>>>>> 5e61dca3afba328687b0de714339607d2009e420
 	  	  });
 }
 //分離第三方
