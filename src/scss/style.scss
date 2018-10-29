@@ -1,0 +1,32 @@
+@import "~bootstrap/scss/bootstrap";
+html{
+    height : 100%;
+}
+
+body { 
+    padding-top: 55px; 
+}
+
+header{
+    width: 100%;
+    align-content: center;
+}
+
+aside{
+    min-height: 500px;
+}
+
+footer{
+    height: 100px;
+}
+
+.jumbotron{
+    height: 500px;
+    width:100%;
+}
+.jumbotron-font{
+    font-size: 36px;
+}
+.nav-link{
+    font-size: 30px
+}
