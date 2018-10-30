@@ -20,7 +20,6 @@ export default  class MyNavbar extends React.Component {
     const list = linklist
     const currentUrl = function(curl){
         var url = './'+window.location.pathname.split('/').reverse()[0];
-        console.log(url,curl)
         if(url == './' && curl =='./index.html') return true
         else return (curl == url)  
     }

@@ -21,5 +21,29 @@ var linklist = [
     }
    
   ]
+
+  var fakearticle=[
+    {
+      "title":"",
+      "content":""
+    },
+    {
+      "title":"",
+      "content":""
+    },
+    {
+      "title":"",
+      "content":""
+    },
+    {
+      "title":"",
+      "content":""
+    },
+    {
+      "title":"",
+      "content":""
+    }
+  ]
   export default linklist
+  export var fakearticle
   
