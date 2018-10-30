@@ -31,7 +31,7 @@ class App extends React.Component {
               <Row >
                 <Col xl="2" md="4"  xs="12"><SideBar cur={'music'}/></Col>
                 <Col xl="10" md="6"  xs="12"> 
-                  <div class="mainContent">
+                <div className={"mainContent"}>
                     <h3>{window.location.pathname}</h3>
                   </div>
                 </Col>
