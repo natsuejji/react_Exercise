@@ -25,9 +25,9 @@ export default class SideBar extends React.Component {
         }
         return (
             <aside  style={navColorStyle} className={'h-100'}>
-                <Row >
+                <Row>
                     <Col className={'mt-4'}>
-                        <Nav pills light  className={'flex-column'}>                        
+                        <Nav pills className={'flex-column'}>                        
                             {link}
                         </Nav>
                     </Col>
