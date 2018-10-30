@@ -112,6 +112,5 @@ module.exports = {
 		HTMLWebpackPluginConfig('index','video', 'video'),
 		HTMLWebpackPluginConfig('index','music', 'music'),
 		HTMLWebpackPluginConfig('index','other', 'other'),
-		
 	]
 };

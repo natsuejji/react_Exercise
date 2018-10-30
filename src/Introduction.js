@@ -27,7 +27,7 @@ class App extends React.Component {
             <Helmet>
                 <title>{'home work1 - Introduction'}</title>
             </Helmet>
-            <MyNavbar cur={'index'} />
+            <MyNavbar/>
             <Container fluid className='p-0 m-0'> 
               <MyJumbotron backimg={jbimg} />
               <Row >
