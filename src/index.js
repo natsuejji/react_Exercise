@@ -12,15 +12,33 @@ import hana from './image/hana.jpg';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-    };
+    this.state = {width: props.width};
   }
+  componentDidMount() {
+    window.addEventListener("resize", this.resize.bind(this));
+    this.resize();
+  }
+
+  resize() {
+    this.setState({width: window.innerWidth});
+  }
+
   render() {
-    
-    const jbimg ={
-      backgroundImage: `url(${hana})`,
-      backgroundColor: '#ffdad2'
-      
+    var jbimg;
+    if (this.state.width > 700) {
+      jbimg = {
+                backgroundImage: `url(${hana})`,
+                backgroundColor: '#ffdad2',
+                backgroundPosition: 'center'
+
+              };
+    }
+    else {
+      jbimg = {
+        backgroundImage: `url(${hana})`,
+        backgroundColor: '#ffdad2',
+        backgroundPosition: '-500px center'
+      };
     }
     return (
         <div>
