@@ -44,3 +44,12 @@ footer{
 .nav-link{
     font-size: 30px
 }
+
+@media (max-width: 766px){
+    .overflow-hidden{
+        overflow-x: hidden;
+    }
+    .overflow-visible{
+        overflow-x: visible;
+    }
+}

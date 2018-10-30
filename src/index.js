@@ -17,9 +17,11 @@ class App extends React.Component {
     };
   }
   render() {
+    
     const jbimg ={
       backgroundImage: `url(${hana})`,
       backgroundColor: '#ffdad2'
+      
     }
     return (
         <div>
