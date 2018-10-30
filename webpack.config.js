@@ -73,7 +73,7 @@ module.exports = {
 	},
 	devServer: {
         inline: true,
-        port: 8008,
+        port: 8877,
 	},
 	optimization: {
 		splitChunks:{
