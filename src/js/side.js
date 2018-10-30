@@ -1,5 +1,5 @@
 import React from 'react';
-import navlinklist from './var.js';
+import linklist from './var.js';
 import {Nav, Col, NavLink, NavItem} from 'reactstrap';
 
 
@@ -9,17 +9,22 @@ export default class SideBar extends React.Component {
 	}
 
     render() {
+        const list = linklist
+        const currentUrl = function(curl){
+            var url = './'+window.location.pathname.split('/').reverse()[0];
+            console.log(url,curl)
+            if(url == './' && curl =='./index.html') return true
+            else return (curl == url)  
+        }
+        const link = list.map(function (link, index) {
+            return <NavItem key={index}  ><NavLink className={currentUrl(link.url)? 'active': ''} href={ link.url} >{link.name}</NavLink></NavItem>
+        });
         return (
             <aside>
                 <Col>
                     <Nav pills className={'flex-column'}>                        
-                        <h3></h3>
-                        <NavItem ><NavLink href="./index.html" active>top</NavLink></NavItem>
-                        <NavItem ><NavLink href="./music.html" >music</NavLink></NavItem>
-                        <NavItem ><NavLink href="#" >0</NavLink></NavItem>
-                        <NavItem ><NavLink href="#" >0</NavLink></NavItem>
-                        <NavItem ><NavLink href="#" >0</NavLink></NavItem>
-                        <NavItem ><NavLink href="#" >0</NavLink></NavItem>
+                        <h3> 選單</h3>
+                        {link}
                     </Nav>
                 </Col>
             </aside>

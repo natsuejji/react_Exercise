@@ -1,23 +1,25 @@
 var linklist = [
     {
       "name": '首頁',
-      "url": './index'
+      "url": './index.html'
     },
     {
       "name": '介紹',
-      "url": './Introduction'
+      "url": './Introduction.html'
     },
     {
       "name": '影片',
-      "url": './video'
+      "url": './video.html'
     },
     {
       "name": '音樂',
-      "url": './music'
+      "url": './music.html'
     },
     {
       "name": '其他',
-      "url": './other'
+      "url": './other.html'
     }
+   
   ]
+  export default linklist
   

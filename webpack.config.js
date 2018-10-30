@@ -19,7 +19,12 @@ module.exports = {
 	mode: 'development',
 	entry: {
 		index : path.join(__dirname, '/src/index.js'),
+		Introduction : path.join(__dirname, '/src/Introduction.js'),
+		video : path.join(__dirname, '/src/video.js'),
 		music : path.join(__dirname, '/src/music.js'),
+		other : path.join(__dirname, '/src/other.js'),
+		
+		
 		vendors:['reactstrap', 'bootstrap']
 	},
 	output: {
@@ -103,7 +108,10 @@ module.exports = {
 	},
 	plugins:[
 		HTMLWebpackPluginConfig('index','index', 'index'),
+		HTMLWebpackPluginConfig('index','Introduction', 'Introduction'),
+		HTMLWebpackPluginConfig('index','video', 'video'),
 		HTMLWebpackPluginConfig('index','music', 'music'),
+		HTMLWebpackPluginConfig('index','other', 'other'),
 		
 	]
 };

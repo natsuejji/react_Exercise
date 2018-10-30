@@ -25,7 +25,7 @@ class App extends React.Component {
     return (
         <div>
             <Helmet>
-                <title>{'home work1 - index'}</title>
+                <title>{'home work1 - video'}</title>
             </Helmet>
             <MyNavbar cur={'index'} />
             <Container fluid className='p-0 m-0'> 
