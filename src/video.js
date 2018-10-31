@@ -16,12 +16,7 @@ class App extends React.Component {
     };
   }
   render() {
-    
-    const jbimg ={
-      backgroundImage: `url(${hana})`,
-      backgroundColor: '#ffdad2'
-      
-    }
+
     return (
         <div>
             <Helmet>
@@ -29,7 +24,7 @@ class App extends React.Component {
             </Helmet>
             <MyNavbar />
             <Container fluid className='p-0 m-0'> 
-              <MyJumbotron backimg={jbimg} />
+              <MyJumbotron />
               <Row >
                 <Col xl="2" md="4"  xs="12"><SideBar cur={'index'}/></Col>
                 <Col xl="10" md="6"  xs="12"> 

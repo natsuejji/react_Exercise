@@ -8,7 +8,6 @@ import MyJumbotron from './js/jumbotron.js';
 import {Container, Row, Col} from 'reactstrap';
 import {fakearticle} from './js/var.js';
 import './scss/style.scss';
-import hana from './image/hana.jpg';
 
 class App extends React.Component {
   constructor(props) {
@@ -25,22 +24,6 @@ class App extends React.Component {
   }
 
   render() {
-    var jbimg;
-    if (this.state.width > 700) {
-      jbimg = {
-                backgroundImage: `url(${hana})`,
-                backgroundColor: '#ffdad2',
-                backgroundPosition: 'center'
-
-              };
-    }
-    else {
-      jbimg = {
-        backgroundImage: `url(${hana})`,
-        backgroundColor: '#ffdad2',
-        backgroundPosition: '-500px center'
-      };
-    }
 
     var fake = fakearticle
     const fakeArtiList = {
@@ -53,7 +36,7 @@ class App extends React.Component {
             </Helmet>
             <MyNavbar/>
             <Container fluid className='p-0 m-0'> 
-              <MyJumbotron backimg={jbimg} />
+              <MyJumbotron/>
               <Row >
                 <Col xl="2" md="4"  xs="12"><SideBar cur={'index'}/></Col>
                 <Col xl="10" md="6"  xs="12"> 

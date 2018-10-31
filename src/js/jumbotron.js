@@ -8,7 +8,7 @@ export default class MyJumbotron extends React.Component {
     render() {
         return (
             <header>
-                <Jumbotron style={this.props.backimg}>
+                <Jumbotron >
                     <h1 className={'jumbotron-font'}>web programming homework - bootstrap</h1>
                 </Jumbotron>  
             </header>

@@ -37,6 +37,11 @@ footer{
 .jumbotron{
     height: 500px;
     width:100%;
+    background-image: url("../image/hana.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 0;
+    background-color: #ffdad2;
 }
 .jumbotron-font{
     font-size: 36px;
@@ -51,6 +56,10 @@ footer{
     }
     .overflow-visible{
         overflow-x: visible;
+    }
+
+    .jumbotron{
+        background-Position: -500px center;
     }
 }
 
