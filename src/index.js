@@ -5,7 +5,7 @@ import MyNavbar from './js/nav.js';
 import SideBar from './js/side.js';
 import MyFooter from './js/footer.js';
 import MyJumbotron from './js/jumbotron.js';
-import {Container, Row, Col} from 'reactstrap';
+import {Container, Row, Col,  Card, Button, CardTitle, CardText} from 'reactstrap';
 import {fakearticle} from './js/var.js';
 import './scss/style.scss';
 
@@ -17,6 +17,7 @@ class App extends React.Component {
   componentDidMount() {
     window.addEventListener("resize", this.resize.bind(this));
     this.resize();
+    console.log(fakearticle)
   }
 
   resize() {
@@ -26,9 +27,20 @@ class App extends React.Component {
   render() {
 
     var fake = fakearticle
-    const fakeArtiList = {
+    const fakeArtiList = fake.map(function (article, index) {
+      return <Card body outline className={'m-3'} color="secondary" key={index}>
+              <CardTitle>{article.title}</CardTitle>
+              <CardText>{article.content}</CardText>
+              <div className={ 'offset-10'}>
+                <Button className={ 'w-100'}>詳細..</Button>
+              </div>
+             </Card>
+    });
       
+    const bold={
+      'fontWeight': 'bold'
     }
+      
     return (
         <div>
             <Helmet>
@@ -41,7 +53,8 @@ class App extends React.Component {
                 <Col xl="2" md="4"  xs="12"><SideBar cur={'index'}/></Col>
                 <Col xl="10" md="6"  xs="12"> 
                   <div className={"mainContent"}>
-                    <h3>{window.location.pathname}</h3>
+                    <h1 style={bold}>公告</h1>
+                    {fakeArtiList}
                   </div>
                 </Col>
               </Row> 

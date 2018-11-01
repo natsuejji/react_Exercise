@@ -5,10 +5,11 @@ import MyNavbar from './js/nav.js';
 import SideBar from './js/side.js';
 import MyFooter from './js/footer.js';
 import MyJumbotron from './js/jumbotron.js';
-import {Container, Row, Col} from 'reactstrap'
+import {Container, Row, Col, Card, CardImg, CardText, CardBody, CardLink,
+  CardTitle, CardSubtitle} from 'reactstrap'
+import YouTube from '@u-wave/react-youtube';
 import './scss/style.scss';
-import hana from './image/hana.jpg';
-
+import {_music} from './js/var.js'
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -16,6 +17,25 @@ class App extends React.Component {
     };
   }
   render() {
+    const music = _music
+    const musiclist = music.map(function (v, index) {
+      return <Card key={index} className={'m-3'}>
+              <CardBody>
+                <CardTitle><h3>{v.title}</h3></CardTitle>
+              </CardBody>
+              <CardBody>
+                <Row>
+                  <YouTube video={v.id} width={'720'} height={'360'} className={'col-xs-12 col-md-6'}/>
+                  <CardText className={'col-xs-12 col-md-6 p-3 lyric'}>
+                    <pre>
+                    {v.lyric}
+                    </pre>
+                  </CardText >
+                </Row>
+              </CardBody>
+             </Card>
+  });
+     
     return (
         <div>
             <Helmet>
@@ -23,12 +43,13 @@ class App extends React.Component {
             </Helmet>
             <MyNavbar />
             <Container fluid className='p-0 m-0'> 
-              <MyJumbotron/>
+              <MyJumbotron />
+              
               <Row >
-                <Col xl="2" md="4"  xs="12"><SideBar cur={'music'}/></Col>
+                <Col xl="2" md="4"  xs="12"><SideBar cur={'index'}/></Col>
                 <Col xl="10" md="6"  xs="12"> 
-                <div className={"mainContent"}>
-                    <h3>{window.location.pathname}</h3>
+                  <div className={"mainContent"}>
+                    {musiclist} 
                   </div>
                 </Col>
               </Row> 

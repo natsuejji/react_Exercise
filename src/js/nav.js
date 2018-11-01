@@ -29,7 +29,7 @@ export default  class MyNavbar extends React.Component {
     return (
         <Navbar color="dark" dark expand="md" className={'fixed-top'}>
         
-          <NavbarBrand href="#">
+          <NavbarBrand href="./">
             完美姆咪世界
           </NavbarBrand>
           <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
