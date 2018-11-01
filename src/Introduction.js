@@ -31,11 +31,11 @@ class App extends React.Component {
                 <Col xl="10" md="6"  xs="12"> 
                   <div className={"mainContent"}>
                     <h2>完美姆咪世界到底是什麼?</h2>
-                    <img src={mumi}/>
+                    <img src={mumi} className={'col-sm-12 col-md-6 '}/>
                     <p>其實我也不知道什麼是完美姆咪世界。</p>
                     <p>但是你一定要知道什麼是姆咪操</p>
                     <p>姆咪。</p>
-                    <Youtube video={'IpPhvrSnFzQ'} width={'720'} height={'360'} />
+                    <Youtube video={'IpPhvrSnFzQ'} width={'720'} height={'360'}  className={'col-sm-12 col-md-6'}/>
                   </div>
                 </Col>
               </Row> 

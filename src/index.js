@@ -28,10 +28,10 @@ class App extends React.Component {
 
     var fake = fakearticle
     const fakeArtiList = fake.map(function (article, index) {
-      return <Card body outline className={'m-3'} color="secondary" key={index}>
+      return <Card body outline className={'mb-3'} color="secondary" key={index}>
               <CardTitle>{article.title}</CardTitle>
               <CardText>{article.content}</CardText>
-              <div className={ 'offset-10'}>
+              <div className={ 'offset-md-10'}>
                 <Button className={ 'w-100'}>詳細..</Button>
               </div>
              </Card>
